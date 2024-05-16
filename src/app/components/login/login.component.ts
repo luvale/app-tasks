@@ -35,7 +35,7 @@ export class LoginComponent {
         this.errorMessage = 'Usuario o contraseña incorrectos';
         setTimeout(() => {
           this.errorMessage = '';
-        }, 5000); 
+        }, 3000); 
       }
     });
   }  
