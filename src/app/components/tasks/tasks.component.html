@@ -1,5 +1,6 @@
 <section class="h-100 d-flex align-items-center">
   <article class="container">
+    <p *ngIf="username">Hola {{ username | async }} 👋🏼</p>
       <form (ngSubmit)="saveForm()">
         <div class="form-group mb-2">
           <h2 class="mb-2">Nueva tarea</h2>
