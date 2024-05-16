@@ -2,23 +2,23 @@
   <article class="container">
       <form (ngSubmit)="saveForm()">
         <div class="form-group mb-2">
-          <h2 class="mb-2">Nueva tarea</h2>
-          <textarea class="form-control" rows="2" [(ngModel)]="newTask" name="newTask"></textarea>
+          <h3 *ngIf="username">Hola {{ username | async }} 🤗</h3>
+          <input class="form-control" rows="2" [(ngModel)]="newTask" name="newTask" placeholder="Agregar una tarea">
         </div>
         <button type="submit" class="btn btn-primary" [disabled]="!newTask">Agregar</button>
       </form>
     <h1 class="title">Lista de tareas</h1>
     <article class="list">
-      <article *ngIf="!allTasks; else tasks">
+      <article *ngIf="!allTasks.length; else tasks">
         <p class="no-tasks">No hay tareas aún</p>
       </article>
       <ng-template #tasks>
         <div class="form-check" *ngFor="let task of allTasks; let i = index">
           <input class="form-check-input" type="checkbox" [checked]="task.checked" id={{i}} (click)="updateTasks(i)">
-          <label class="form-check-label" for={{i}} (click)="updateTasks(i)">
+          <label class="form-check-label" for={{i}}>
             {{task.name}}
           </label>
-          <button class="x-button" (click)="deleteTask(i)"  [ngClass]="{'d-none': task.checked}">X</button>
+          <button type="button" class="btn btn-secondary x-button" (click)="deleteTask(i)"  [ngClass]="{'d-none': task.checked}">X</button>
         </div>  
       </ng-template>
     </article>
