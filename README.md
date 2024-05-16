@@ -16,7 +16,7 @@ Welcome to AppTasks! This Angular application helps you manage your tasks effici
 
 ## Demo
 
-Check out the live demo.
+Check out the live demo [here](https://task-list-luva.netlify.app/tasks/).
 
 ## Technology Stack 👩🏻‍💻
 

@@ -9,7 +9,7 @@
       </form>
     <h1 class="title">Lista de tareas</h1>
     <article class="list">
-      <article *ngIf="!allTasks; else tasks">
+      <article *ngIf="!allTasks.length; else tasks">
         <p class="no-tasks">No hay tareas aún</p>
       </article>
       <ng-template #tasks>
