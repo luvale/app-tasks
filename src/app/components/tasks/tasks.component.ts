@@ -10,7 +10,7 @@ import { getUsername, isLoggedIn } from '../../state/selectors/auth.selector';
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss'
 })
