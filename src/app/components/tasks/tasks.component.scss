@@ -1,0 +1,45 @@
+@import "../../../assets/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title {
+  text-align: center;
+}
+.btn-primary {
+  max-width: 200px;
+  width: 100%;
+}
+.list {
+  border-radius: 20px;
+  border: 6px solid $blue;
+  padding: 10px;
+}
+.x-button {
+  padding: 0;
+  height: 30px;
+  width: 30px;
+}
+.form-check-input{
+  width: 30px;
+  height: 30px;
+}
+.form-check-label{
+  cursor: pointer;
+  font-size: 17px;
+
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+.no-tasks {
+  text-align: center;
+  margin-bottom: 0;
+}
